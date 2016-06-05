@@ -20,7 +20,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     && which fpm || gem install fpm \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt \
-    && wget https://storage.googleapis.com/golang/go${GO_VERSION}.linux-${GO_ARCH}.tar.gz; \
+    && wget -nv https://storage.googleapis.com/golang/go${GO_VERSION}.linux-${GO_ARCH}.tar.gz; \
         tar -C /usr/local/ -xf /go${GO_VERSION}.linux-${GO_ARCH}.tar.gz ; \
     rm /go${GO_VERSION}.linux-${GO_ARCH}.tar.gz
 
