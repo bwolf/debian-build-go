@@ -1,7 +1,7 @@
 FROM debian:jessie
 
 ENV GOPATH /root/go
-ENV GO_VERSION 1.6.2
+ENV GO_VERSION 1.7.1
 ENV GO_ARCH amd64
 
 RUN DEBIAN_FRONTEND=noninteractive \
