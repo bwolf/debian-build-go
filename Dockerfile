@@ -4,9 +4,10 @@ ENV GOPATH /root/go
 ENV GO_VERSION 1.7.1
 ENV GO_ARCH amd64
 
-RUN DEBIAN_FRONTEND=noninteractive \
-    apt-get update \
-    && apt-get install -y \
+RUN apt-get update \
+    && echo 'APT::Acquire::Retries "3";' > /etc/apt/apt.conf.d/retries \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y -q \
+        asciidoc \
         build-essential \
         bison \
         curl \
