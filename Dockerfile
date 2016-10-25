@@ -18,6 +18,7 @@ RUN apt-get update \
         ruby-dev \
         wget \
         zip \
+        asciidoc \
     && which fpm || gem install fpm \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt \
