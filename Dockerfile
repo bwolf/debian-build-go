@@ -1,7 +1,7 @@
 FROM debian:jessie
 
 ENV GOPATH /root/go
-ENV GO_VERSION 1.7.1
+ENV GO_VERSION 1.8.3
 ENV GO_ARCH amd64
 
 RUN apt-get update \
